@@ -1,0 +1,109 @@
+snippet bridge
+alias br
+    {
+        "time": [${1:0}, ${4:0}],
+        "bridge": "${2}橋",
+        "length": ${3:0}
+    },
+
+snippet city
+alias ci
+    {
+        "time": ${1:0},
+        "city": "${2}"
+    },
+
+snippet direction1
+alias d1
+    {
+        "time": ${1:0},
+        "directions": [
+            {
+                "direction": ${2:3},
+                "route": "${3}",
+                "name_en": ["${4}", "${5}", "${6}"],
+                "name_ja": ["${7}", "${8}", "${9}"]
+            }
+        ]
+    },
+
+snippet direction2
+alias d2
+    {
+        "time": ${1:0},
+        "directions": [
+            {
+                "direction": ${2:3},
+                "route": "${4}",
+                "name_en": ["${6}", "${7}", "${8}"],
+                "name_ja": ["${12}", "${13}", "${14}"]
+            },
+            {
+                "direction": ${3:1},
+                "route": "${5}",
+                "name_en": ["${9}", "${10}", "${11}"],
+                "name_ja": ["${15}", "${16}", "${17}"]
+            }
+        ]
+    },
+
+snippet direction3
+alias d3
+    {
+        "time": ${1:0},
+        "directions": [
+            {
+                "direction": ${2:3},
+                "route": "${5}",
+                "name_en": ["${8}", "${9}", "${10}"],
+                "name_ja": ["${17}", "${18}", "${19}"]
+            },
+            {
+                "direction": ${3:1},
+                "route": "${6}",
+                "name_en": ["${11}", "${12}", "${13}"],
+                "name_ja": ["${20}", "${21}", "${22}"]
+            },
+            {
+                "direction": ${4:5},
+                "route": "${7}",
+                "name_en": ["${14}", "${15}", "${16}"],
+                "name_ja": ["${23}", "${24}", "${25}"]
+            }
+        ]
+    },
+
+snippet distance
+alias ds
+    {
+        "time": ${1:0},
+        "route": "${2}",
+        "distance": [${3:null}, ${4:null}, ${5:null}, ${6:null}],
+        "name_en": ["${7}", "${8}", "${9}", "${10}"],
+        "name_ja": ["${11}", "${12}", "${13}", "${14}"]
+    },
+
+snippet guide
+alias gu
+    {
+        "time": ${1:0},
+        "guide": ${2:3},
+        "name": "${3}"
+    },
+
+snippet route
+alias ro
+    {
+        "time": ${1:0},
+        "route": "${2}",
+        "name": "${3}"
+    },
+
+snippet tunnel
+alias tu
+    {
+        "time": [${1:0}, ${4:0}],
+        "tunnel": "${2}トンネル",
+        "length": ${3:0}
+    },
+
