@@ -1,0 +1,15 @@
+- name: apt-get install
+  apt:
+    name: {{ item }}
+    update_cache: yes
+  with_items:
+    - build-essential
+    - git
+    - lua5.2
+    - lua5.2-dev
+    - luajit
+    - ncurses-dev
+    - python-dev
+    - python3-dev
+    - ruby-dev
+    - tmux

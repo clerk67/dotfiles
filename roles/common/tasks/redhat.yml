@@ -1,0 +1,45 @@
+- name: yum group install "Development Tools"
+  yum:
+    name: "@Development tools"
+    state: present
+
+- name: yum install epel-release
+  yum:
+    name: epel-release
+    state: present
+
+- name: wget remi-release-7.rpm
+  get_url:
+    url: http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+    sha256sum: e809caa5f1ad5089f98cdcb13e6696b0a53df83a43f81fb1f70cfbaa6ed52810
+    dest: /usr/local/src
+
+- name: yum localinstall remi-release-7.rpm
+  yum:
+    name: /usr/local/src/remi-release-7.rpm
+    state: present
+
+- name: yum install php
+  yum:
+    name: {{ item }}
+    enablerepo: remi,remi-php56
+    state: present
+  with_items:
+    - php
+    - php-mbstring
+    - php-mysqlnd
+    - php-pdo
+    - php-xml
+
+- name: yum remove vim-enhanced
+  yum:
+    name: vim-enhanced
+    state: absent
+
+- name: yum install lua-devel ncurses-devel
+  yum:
+    name: {{ item }}
+    state: present
+  with_items:
+    - lua-devel
+    - ncurses-devel

@@ -109,7 +109,7 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 
 augroup ftindent
   autocmd!
-  autocmd BufNewFile,BufRead *.html,*.css,*.js,*.jsx,*.rb,*.sh,*.blade.php setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd BufNewFile,BufRead *.html,*.css,*.js,*.jsx,*.rb,*.sh,*.json,*.yml,*.blade.php setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 augroup myXML
