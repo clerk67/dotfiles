@@ -37,7 +37,7 @@ call dein#add('dhruvasagar/vim-table-mode')
 call dein#add('haya14busa/incsearch.vim')
 call dein#add('itchyny/lightline.vim')
 call dein#add('itmammoth/doorboy.vim')
-call dein#add('jaxbot/github-issues.vim')
+" call dein#add('jaxbot/github-issues.vim')
 call dein#add('kana/vim-operator-user')
 call dein#add('kana/vim-textobj-user')
 call dein#add('kannokanno/previm')
@@ -109,7 +109,7 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 
 augroup ftindent
   autocmd!
-  autocmd BufNewFile,BufRead *.html,*.css,*.js,*.jsx,*.rb,*.sh,*.json,*.yml,*.blade.php setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd BufNewFile,BufRead *.html,*.css,*.js,*.jsx,*.rb,*.sh,*.json,*.yml,*.vue,*.blade.php setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 augroup myXML
@@ -117,6 +117,8 @@ augroup myXML
   autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
 augroup END
+
+autocmd BufNewFile,BufRead *.vue syntax sync fromstart
 
 autocmd FileType php :set dictionary=$HOME/.vim/dict/php.dict
 
