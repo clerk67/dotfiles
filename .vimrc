@@ -87,15 +87,16 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=2
+set modeline
 set noshowmode
 set number
-set shiftwidth=4
+set shiftwidth=2
 set showtabline=2
 set smartcase
 set smartindent
-set softtabstop=4
+set softtabstop=2
 set spelllang=en,cjk
-set tabstop=4
+set tabstop=2
 
 inoremap { {}<Left>
 inoremap ( ()<Left>
@@ -109,7 +110,7 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 
 augroup ftindent
   autocmd!
-  autocmd BufNewFile,BufRead *.html,*.css,*.js,*.jsx,*.rb,*.sh,*.json,*.yml,*.vue,*.blade.php setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd BufNewFile,BufRead *.php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 
 augroup myXML
@@ -118,7 +119,7 @@ augroup myXML
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
 augroup END
 
-autocmd BufNewFile,BufRead *.vue syntax sync fromstart
+autocmd BufNewFile,BufRead *.ejs,*.vue syntax sync fromstart
 
 autocmd FileType php :set dictionary=$HOME/.vim/dict/php.dict
 
