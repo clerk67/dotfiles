@@ -1,3 +1,0 @@
-- hosts: development
-  roles:
-    - common
